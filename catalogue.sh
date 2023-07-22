@@ -1,4 +1,6 @@
 cp catalogue.service /etc/systemd/system/catalogue.service
+cp mongo.repo /etc/yum.repos.d/mongo.repo
+
 mkdir /app
 
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
@@ -13,6 +15,9 @@ useradd roboshop
 
 cd /app
 npm install
+
+yum install mongodb-org-shell -y
+mongo --host mongodb.dljrobo.online </app/schema/catalogue.js
 
 systemctl daemon-reload
 
