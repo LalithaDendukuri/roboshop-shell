@@ -15,9 +15,9 @@ npm install
 
 yum install mongodb-org-shell -y
 
-mongo --host mongodb.dljrobo.onlie </app/schema/user.js
+mongo --host mongodb.dljrobo.online </app/schema/user.js
 
 systemctl daemon-reload
 
 systemctl enable user
-systemctl start user
+systemctl restart user
