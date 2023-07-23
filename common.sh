@@ -86,3 +86,14 @@ func_python(){
 
   func_systemd
 }
+func_golang(){
+
+  yum install golang -y
+  func_apppreq
+
+  go mod init dispatch
+  go get
+  go build
+
+  func_systemd
+}
