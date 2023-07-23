@@ -1,5 +1,5 @@
 component=dispatch
 source common.sh
 
-func_golonag
+func_golang
 
