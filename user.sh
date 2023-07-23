@@ -1,4 +1,4 @@
 component=user
 source common.sh
 
-java_node
+func_nodejs
